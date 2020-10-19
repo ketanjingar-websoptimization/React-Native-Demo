@@ -15,11 +15,7 @@ import {
   View,
   StatusBar,
   TextInput,
-  Button,
   FlatList,
-  Alert,
-  Keyboard,
-  Text
 } from 'react-native';
 import SquareForApp2 from '../components/squareForApp2';
 
@@ -65,6 +61,8 @@ class App2 extends React.Component {
               renderItem={renderItem}
               keyExtractor={item => item.id}
               numColumns={3}
+              keyboardShouldPersistTaps="never"
+              keyboardDismissMode="on-drag"
             />
           </View>
         </SafeAreaView>
