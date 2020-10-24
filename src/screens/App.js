@@ -9,12 +9,10 @@
  */
 
 import React from 'react';
-import { SafeAreaView, StyleSheet, View, StatusBar, Alert } from 'react-native';
-import Square from '../components/square';
-
+import {SafeAreaView, StyleSheet, View, StatusBar, Alert} from 'react-native';
+import Square from '@screens';
 
 class App extends React.Component {
-
   // // is called after render method, It is used for the network calls.
   // componentDidMount() {
   //   Alert.alert('componentDidMount()', 'called', [{ text: 'OK' }]);
@@ -42,30 +40,31 @@ class App extends React.Component {
   //   Alert.alert('shouldComponentUpdate()', 'called', [{ text: 'OK' }]);
   // }
 
-
   render() {
     return (
       <>
         <StatusBar barStyle="dark-content" />
         <SafeAreaView>
           <View style={styles.container}>
-
-            <View style={{ flexDirection: 'row' }}>
+            <View style={{flexDirection: 'row'}}>
               <Square name="view1" color="red" />
               <Square name="view2" color="green" />
               <Square name="view3" color="blue" />
             </View>
 
-
-            <View style={{ flexDirection: 'row', justifyContent: 'center' }}>
+            <View style={{flexDirection: 'row', justifyContent: 'center'}}>
               <Square name="view4" color="yellow" />
             </View>
 
-            <View style={{ flexDirection: 'row', alignContent: 'stretch', borderWidth: 3, }}>
+            <View
+              style={{
+                flexDirection: 'row',
+                alignContent: 'stretch',
+                borderWidth: 3,
+              }}>
               <Square name="view5" color="red" />
               <Square name="view6" color="green" />
             </View>
-
           </View>
         </SafeAreaView>
       </>
@@ -81,6 +80,5 @@ const styles = StyleSheet.create({
     backgroundColor: 'powderblue',
   },
 });
-
 
 export default App;

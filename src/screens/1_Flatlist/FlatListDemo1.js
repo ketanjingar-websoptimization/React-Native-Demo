@@ -10,15 +10,15 @@ import {
 
 const DATA = [
   {
-    id: 1,
+    id: '1',
     title: 'First Item',
   },
   {
-    id: 2,
+    id: '2',
     title: 'Second Item',
   },
   {
-    id: 3,
+    id: '3',
     title: 'Third Item',
   },
 ];
@@ -29,7 +29,7 @@ const Item = ({title}) => (
   </View>
 );
 
-const FlatListDemo = () => {
+export default FlatListDemo1 = () => {
   const renderItem = ({item}) => (
     //from item we can access the properties of array object
     <Item title={item.title} /> //calling custom component
@@ -61,5 +61,3 @@ const styles = StyleSheet.create({
     fontSize: 32,
   },
 });
-
-export default FlatListDemo;

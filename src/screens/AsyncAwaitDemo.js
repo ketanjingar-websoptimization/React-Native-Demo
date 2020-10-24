@@ -1,22 +1,12 @@
-/* eslint-disable react-native/no-inline-styles */
-/* eslint-disable prettier/prettier */
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
-
 import React from 'react';
-import { StyleSheet, View, StatusBar, Text, ActivityIndicator } from 'react-native';
-
-
-// const MyActivityIndicator = () => {
-//   return (
-//     <ActivityIndicator style={{ height: 800 }} color="#C00" size="large" animating="true" />
-//   );
-// };
+import {
+  StyleSheet,
+  View,
+  StatusBar,
+  Text,
+  ActivityIndicator,
+} from 'react-native';
+import * as co from '@constants';
 
 // https://programming-quotes-api.herokuapp.com/quotes/random
 export default class AsyncDemo extends React.Component {
@@ -24,8 +14,8 @@ export default class AsyncDemo extends React.Component {
 
   state = {
     isLoading: true,
-    post: { en: '', author: '' },
-  }
+    post: {en: '', author: ''},
+  };
 
   constructor() {
     super();
@@ -36,12 +26,12 @@ export default class AsyncDemo extends React.Component {
     try {
       let data = await fetch(this.url);
       let post = await data.json();
-      this.setState({ post, isLoading: false });
+      this.setState({post, isLoading: false});
     } catch (error) {
       console.log('error occured');
       console.log(error);
     }
-  }
+  };
 
   render() {
     const animating = this.state.isLoading;
@@ -50,9 +40,19 @@ export default class AsyncDemo extends React.Component {
       <>
         <StatusBar barStyle="light-content" />
         <View style={styles.containerMain}>
-          {this.state.isLoading ? <ActivityIndicator style={{ height: 80 }} color="#C00" size="large" animating={animating} /> : <><Text style={styles.quote}>{this.state.post.en}</Text>
-            <Text style={styles.author}> - {this.state.post.author}</Text></>}
-
+          {this.state.isLoading ? (
+            <ActivityIndicator
+              style={{height: 80}}
+              color="#C00"
+              size="large"
+              animating={animating}
+            />
+          ) : (
+            <>
+              <Text style={styles.quote}>{this.state.post.en}</Text>
+              <Text style={styles.author}> - {this.state.post.author}</Text>
+            </>
+          )}
         </View>
       </>
     );
@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
     fontStyle: 'italic',
   },
   author: {
-    // backgroundColor: 'grey',
+    backgroundColor: 'grey',
     textAlign: 'center',
     fontSize: 20,
   },

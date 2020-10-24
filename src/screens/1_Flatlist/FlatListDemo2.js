@@ -9,7 +9,7 @@ import {
   Image,
 } from 'react-native';
 
-class FlatListDemo2 extends React.Component {
+export default class FlatListDemo2 extends React.Component {
   render() {
     const DATA = [
       {
@@ -39,12 +39,10 @@ class FlatListDemo2 extends React.Component {
       return (
         <View style={styles.itemMainContainer}>
           <View style={styles.itemContainer}>
-            //{' '}
-            {/*
             <Image
-              source={require('../../images/ketan.jpg')}
+              source={require('@assets/images/ketan.jpg')}
               style={styles.image}
-            />*/}
+            />
             <View style={{flexDirection: 'column'}}>
               <Text style={styles.name}>{name}</Text>
               <Text>{phone}</Text>
@@ -75,7 +73,7 @@ class FlatListDemo2 extends React.Component {
             <FlatList
               data={DATA}
               renderItem={renderItem}
-              // keyExtractor={item => item.id}
+              keyExtractor={(item) => item.id}
             />
           </View>
         </SafeAreaView>
@@ -109,5 +107,3 @@ const styles = StyleSheet.create({
     padding: 10,
   },
 });
-
-export default FlatListDemo2;

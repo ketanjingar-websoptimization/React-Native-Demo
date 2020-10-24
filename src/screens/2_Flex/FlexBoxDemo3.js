@@ -1,27 +1,14 @@
-/* eslint-disable react-native/no-inline-styles */
-/* eslint-disable prettier/prettier */
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
-
 import React from 'react';
-import { SafeAreaView, StyleSheet, View, StatusBar, Text } from 'react-native';
+import {SafeAreaView, StyleSheet, View, StatusBar, Text} from 'react-native';
 
-
-class FlexBoxDemo3 extends React.Component {
-
+export default class FlexBoxDemo3 extends React.Component {
   render() {
     return (
       <>
         <StatusBar barStyle="dark-content" />
-        <SafeAreaView style={styles.container} >
-
+        <SafeAreaView style={styles.container}>
           <View style={styles.container}>
-            <Text style={styles.title}>flex</Text>
+            <Text style={styles.title}>Flex Demo</Text>
 
             <View style={styles.view1}>
               <Text style={styles.text}>View 1</Text>
@@ -30,8 +17,6 @@ class FlexBoxDemo3 extends React.Component {
             <View style={styles.view2}>
               <Text style={styles.text}>View 2</Text>
             </View>
-
-
           </View>
         </SafeAreaView>
       </>
@@ -60,17 +45,8 @@ const styles = StyleSheet.create({
     backgroundColor: 'coral',
     justifyContent: 'center',
   },
-  view3: {
-    flex: 1,
-    backgroundColor: 'darkseagreen',
-    justifyContent: 'center',
-  },
   text: {
-    // borderWidth: 1,
     textAlign: 'center',
     fontSize: 23,
   },
 });
-
-
-export default FlexBoxDemo3;

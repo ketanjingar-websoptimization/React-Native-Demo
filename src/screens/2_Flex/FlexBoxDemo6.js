@@ -9,8 +9,7 @@
  */
 
 import React from 'react';
-import { SafeAreaView, StyleSheet, View, StatusBar, Text } from 'react-native';
-
+import {SafeAreaView, StyleSheet, View, StatusBar, Text} from 'react-native';
 
 class FlexBoxDemo6 extends React.Component {
   render() {
@@ -19,7 +18,7 @@ class FlexBoxDemo6 extends React.Component {
         <StatusBar barStyle="light-content" />
         <SafeAreaView>
           <View style={styles.mainContainer}>
-            <View style={styles.view2} >
+            <View style={styles.view2}>
               <View style={styles.view3} />
               <View style={styles.view4} />
               <View style={styles.view5} />
@@ -27,8 +26,6 @@ class FlexBoxDemo6 extends React.Component {
             </View>
             <View style={styles.view6} />
           </View>
-
-
         </SafeAreaView>
       </>
     );

@@ -17,16 +17,14 @@ import {
   TextInput,
   FlatList,
 } from 'react-native';
-import SquareForApp2 from '../components/squareForApp2';
+import SquareForApp2 from '@screens';
 
-const Separator = () => (
-  <View style={styles.separator} />
-);
+const Separator = () => <View style={styles.separator} />;
 
 class App2 extends React.Component {
   state = {
     number: '',
-  }
+  };
 
   render() {
     var randomColor = require('randomcolor');
@@ -34,10 +32,10 @@ class App2 extends React.Component {
 
     const Data = [];
     for (let i = 0; i < this.state.number; i++) {
-      Data.push({ id: i, title: 'view1' });
+      Data.push({id: i, title: 'view1'});
     }
 
-    const renderItem = ({ item }) => (
+    const renderItem = ({item}) => (
       <SquareForApp2 name={item.title} color={color} />
     );
 
@@ -50,16 +48,19 @@ class App2 extends React.Component {
               style={styles.input}
               placeholder="Enter number to print squares"
               keyboardType="numeric"
-              onChangeText={(value) => this.setState({
-                number: value,
-              })}
-              value={this.state.text} />
+              onChangeText={(value) =>
+                this.setState({
+                  number: value,
+                })
+              }
+              value={this.state.text}
+            />
 
             <Separator />
             <FlatList
               data={Data}
               renderItem={renderItem}
-              keyExtractor={item => item.id}
+              keyExtractor={(item) => item.id}
               numColumns={3}
               keyboardShouldPersistTaps="never"
               keyboardDismissMode="on-drag"
@@ -88,6 +89,5 @@ const styles = StyleSheet.create({
     borderBottomWidth: StyleSheet.hairlineWidth,
   },
 });
-
 
 export default App2;
