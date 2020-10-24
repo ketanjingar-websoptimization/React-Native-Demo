@@ -141,6 +141,3 @@ const styles = StyleSheet.create({
     fontSize: 32,
   },
 });
-// var styleObj = StyleSheet.flatten([styles.title]);
-// console.log('sdf');
-// console.log(styleObj.backgroundColor === 'red');

@@ -1,15 +1,13 @@
-/* eslint-disable react-native/no-inline-styles */
-/* eslint-disable prettier/prettier */
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
 import React from 'react';
-import { SafeAreaView, StatusBar, View, StyleSheet, Text, SectionList } from 'react-native';
-import FlatListDemo from './FlatListDemo';
+import {
+  SafeAreaView,
+  StatusBar,
+  View,
+  StyleSheet,
+  Text,
+  SectionList,
+} from 'react-native';
+import FlatListDemo from '@screens';
 
 const DATA = [
   {
@@ -30,7 +28,7 @@ const DATA = [
   },
 ];
 
-const Item = ({ title }) => {
+const Item = ({title}) => {
   return (
     <View style={styles.item}>
       <Text style={styles.title}>{title}</Text>
@@ -48,8 +46,8 @@ class SectionListDemo extends React.Component {
             <SectionList
               sections={DATA}
               keyExtractor={(item, index) => item + index}
-              renderItem={({ item }) => <Item title={item} />}
-              renderSectionHeader={({ section: { title } }) => (
+              renderItem={({item}) => <Item title={item} />}
+              renderSectionHeader={({section: {title}}) => (
                 <Text style={styles.header}>{title}</Text>
               )}
             />
@@ -79,4 +77,3 @@ const styles = StyleSheet.create({
 });
 
 export default SectionListDemo;
-

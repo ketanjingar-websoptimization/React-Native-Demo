@@ -7,7 +7,7 @@ import {
   Dimensions,
   Platform,
 } from 'react-native';
-import RandomColorSquare from '../components/RandomColorSquare';
+import RandomColorSquare from '@components';
 
 export default function ResponsiveLayoutDemo1() {
   return (

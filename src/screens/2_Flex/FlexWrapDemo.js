@@ -1,16 +1,5 @@
-/* eslint-disable react-native/no-inline-styles */
-/* eslint-disable prettier/prettier */
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
-
 import React from 'react';
-import { SafeAreaView, StyleSheet, View, StatusBar, Text } from 'react-native';
-
+import {SafeAreaView, StyleSheet, View, StatusBar, Text} from 'react-native';
 
 export default class FlexWrapDemo extends React.Component {
   render() {
@@ -33,10 +22,8 @@ export default class FlexWrapDemo extends React.Component {
         </SafeAreaView>
       </>
     );
-
   }
 }
-
 
 const styles = StyleSheet.create({
   mainContainer: {
@@ -48,7 +35,6 @@ const styles = StyleSheet.create({
     width: 50,
     backgroundColor: 'yellow',
     flexGrow: 1,
-
   },
   view2: {
     height: 150,
@@ -98,9 +84,4 @@ const styles = StyleSheet.create({
     backgroundColor: 'red',
     position: 'absolute',
   },
-
-
 });
-
-
-

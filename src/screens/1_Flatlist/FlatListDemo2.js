@@ -1,13 +1,3 @@
-/* eslint-disable react-native/no-inline-styles */
-/* eslint-disable prettier/prettier */
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
-
 import React from 'react';
 import {
   SafeAreaView,
@@ -20,36 +10,62 @@ import {
 } from 'react-native';
 
 class FlatListDemo2 extends React.Component {
-
   render() {
-
     const DATA = [
-      { id: '1', pic: 'ketan.jpg', name: 'Ketan Jingar', phone: '8160626880', date: new Date() },
-      { id: '2', pic: 'ketan.jpg', name: 'Abhishek Thakkar', phone: '8866088492', date: new Date() },
-      { id: '3', pic: 'ketan.jpg', name: 'Dhruv Sutail', phone: '8460999499', date: new Date() },
+      {
+        id: '1',
+        pic: 'ketan.jpg',
+        name: 'Ketan Jingar',
+        phone: '8160626880',
+        date: new Date(),
+      },
+      {
+        id: '2',
+        pic: 'ketan.jpg',
+        name: 'Abhishek Thakkar',
+        phone: '8866088492',
+        date: new Date(),
+      },
+      {
+        id: '3',
+        pic: 'ketan.jpg',
+        name: 'Dhruv Sutail',
+        phone: '8460999499',
+        date: new Date(),
+      },
     ];
 
-    const Item = ({ id, pic, name, phone, date }) => {
+    const Item = ({id, pic, name, phone, date}) => {
       return (
         <View style={styles.itemMainContainer}>
           <View style={styles.itemContainer}>
-            <Image source={require('../../images/ketan.jpg')} style={styles.image} />
-            <View style={{ flexDirection: 'column' }}>
+            //{' '}
+            {/*
+            <Image
+              source={require('../../images/ketan.jpg')}
+              style={styles.image}
+            />*/}
+            <View style={{flexDirection: 'column'}}>
               <Text style={styles.name}>{name}</Text>
-              <Text >{phone}</Text>
-              <Text >{date.toString()}</Text>
+              <Text>{phone}</Text>
+              <Text>{date.toString()}</Text>
             </View>
           </View>
         </View>
       );
     };
 
-    const renderItem = ({ item }) => {
+    const renderItem = ({item}) => {
       return (
-        < Item id={item.id} pic={item.pic} name={item.name} phone={item.phone} date={item.date} />
+        <Item
+          id={item.id}
+          pic={item.pic}
+          name={item.name}
+          phone={item.phone}
+          date={item.date}
+        />
       );
     };
-
 
     return (
       <>
@@ -59,7 +75,7 @@ class FlatListDemo2 extends React.Component {
             <FlatList
               data={DATA}
               renderItem={renderItem}
-            // keyExtractor={item => item.id}
+              // keyExtractor={item => item.id}
             />
           </View>
         </SafeAreaView>
@@ -69,9 +85,7 @@ class FlatListDemo2 extends React.Component {
 }
 
 const styles = StyleSheet.create({
-  containerMain: {
-
-  },
+  containerMain: {},
   itemMainContainer: {
     padding: 10,
   },
