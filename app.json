@@ -1,4 +1,5 @@
 {
   "name": "LifeCycle",
-  "displayName": "LifeCycle"
+  "displayName": "LifeCycle",
+  "orientation": "default"
 }

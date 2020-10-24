@@ -17,7 +17,6 @@ import {
   Text,
   FlatList,
   Image,
-  TouchableHighlight,
 } from 'react-native';
 
 class FlatListDemo2 extends React.Component {
@@ -30,31 +29,26 @@ class FlatListDemo2 extends React.Component {
       { id: '3', pic: 'ketan.jpg', name: 'Dhruv Sutail', phone: '8460999499', date: new Date() },
     ];
 
-    const Item = ({ id, pic, name, phone, date }) => (
-
-      <View style={styles.itemMainContainer}>
-
-        <View style={styles.itemContainer}>
-          <Image source={require('../../images/ketan.jpg')} style={styles.image} />
-          <View style={{ flexDirection: 'column' }}>
-            <Text style={styles.name}>{name}</Text>
-            <Text >{phone}</Text>
-            <Text >{date.toString()}</Text>
-
-            <TouchableHighlight>
-              <View style={styles.button}>
-                <Text>Call</Text>
-              </View>
-            </TouchableHighlight>
+    const Item = ({ id, pic, name, phone, date }) => {
+      return (
+        <View style={styles.itemMainContainer}>
+          <View style={styles.itemContainer}>
+            <Image source={require('../../images/ketan.jpg')} style={styles.image} />
+            <View style={{ flexDirection: 'column' }}>
+              <Text style={styles.name}>{name}</Text>
+              <Text >{phone}</Text>
+              <Text >{date.toString()}</Text>
+            </View>
           </View>
         </View>
-      </View>
+      );
+    };
 
-    );
-
-    const renderItem = ({ item }) => (
-      <Item id={item.id} pic={item.pic} name={item.name} phone={item.phone} date={item.date} />
-    );
+    const renderItem = ({ item }) => {
+      return (
+        < Item id={item.id} pic={item.pic} name={item.name} phone={item.phone} date={item.date} />
+      );
+    };
 
 
     return (
@@ -87,14 +81,13 @@ const styles = StyleSheet.create({
     backgroundColor: 'powderblue',
   },
   name: {
-    // borderWidth: 1,
     fontSize: 18,
     fontFamily: 'arial',
   },
   image: {
     marginRight: 12,
-    height: 75,
-    width: 75,
+    height: 60,
+    width: 60,
   },
   button: {
     alignItems: 'center',

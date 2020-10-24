@@ -1,15 +1,12 @@
-/* eslint-disable react-native/no-inline-styles */
-/* eslint-disable prettier/prettier */
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
-
 import React from 'react';
-import { SafeAreaView, View, FlatList, StyleSheet, Text, StatusBar } from 'react-native';
+import {
+  SafeAreaView,
+  View,
+  FlatList,
+  StyleSheet,
+  Text,
+  StatusBar,
+} from 'react-native';
 
 const DATA = [
   {
@@ -26,15 +23,14 @@ const DATA = [
   },
 ];
 
-const Item = ({ title }) => (
+const Item = ({title}) => (
   <View style={styles.item}>
     <Text style={styles.title}>{title}</Text>
   </View>
 );
 
 const FlatListDemo = () => {
-
-  const renderItem = ({ item }) => (
+  const renderItem = ({item}) => (
     //from item we can access the properties of array object
     <Item title={item.title} /> //calling custom component
   );
@@ -43,8 +39,8 @@ const FlatListDemo = () => {
     <SafeAreaView style={styles.container}>
       <FlatList
         data={DATA}
-        renderItem={renderItem}   //render single <Item> custom component created above
-        keyExtractor={item => item.id}
+        renderItem={renderItem} //render single <Item> custom component created above
+        keyExtractor={(item) => item.id}
       />
     </SafeAreaView>
   );

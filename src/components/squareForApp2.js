@@ -1,24 +1,14 @@
-/* eslint-disable prettier/prettier */
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
-import React, { Component } from 'react';
-import { View, StyleSheet, Text } from 'react-native';
-
+import React, {Component} from 'react';
+import {View, StyleSheet, Text} from 'react-native';
 
 export default class SquareForApp2 extends Component {
-  state = { setColor: this.props.color };
+  state = {setColor: this.props.color};
 
   render(props) {
     return (
-      <View style={[styles.view1, { backgroundColor: this.state.setColor }]} >
+      <View style={[styles.view1, {backgroundColor: this.state.setColor}]}>
         <Text style={styles.text}>{this.props.name} </Text>
       </View>
-
     );
   }
 }
