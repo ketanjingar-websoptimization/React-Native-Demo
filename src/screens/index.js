@@ -19,3 +19,11 @@ export {default as SplashScreenFromAndroidAssetFolder} from './5_ImageLoading/Sp
 export {default as SplashScreenFromHttpUrl} from './5_ImageLoading/SplashScreenFromHttpUrl';
 export {default as SplashScreenFromLocalResourceFolder} from './5_ImageLoading/SplashScreenFromLocalResourceFolder';
 export {default as ImagePropsDemo} from './5_ImageLoading/ImagePropsDemo';
+export {default as ImageMethods} from './5_ImageLoading/ImageMethods';
+export {default as ImageBackgroundDemo} from './5_ImageLoading/ImageBackgroundDemo';
+export {default as AsyncAwaitDemo1} from './7_AsynAwaitPromise/AsyncAwaitDemo1';
+export {default as BasicButton} from './8_Buttons/BasicButton';
+export {default as TouchableOpacityDemo} from './8_Buttons/TouchableOpacityDemo';
+export {default as TouchableWithoutFeedbackDemo} from './8_Buttons/TouchableWithoutFeedbackDemo';
+export {default as TouchableHighlightDemo} from './8_Buttons/TouchableHighlightDemo';
+export {default as NestedTouchableOpacityDemo} from './8_Buttons/NestedTouchableOpacityDemo';

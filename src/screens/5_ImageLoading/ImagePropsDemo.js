@@ -17,14 +17,14 @@ export default class ImagePropsDemo extends React.Component {
             uri:
               'https://landerapp.com/blog/wp-content/uploads/2018/06/1_FFP1bisztXseQFbZ-WQedw-1-1472x1472.png',
           }}
-          loadingIndicatorSource={require('@assets/images/loader.gif')}
+          // loadingIndicatorSource={require('@assets/images/loader.gif')}
           style={styles.image}
           // onLoadStart={() => this.setState({loading: true})}
           // onLoadEnd={() => this.setState({loading: false})}
           // blurRadius={2}
           // resizeMode="center"
           // capInsets={{left: 150, right: 150, bottom: 150, top: 15}}
-          // fadeDuration={200000}
+          // fadeDuration={5000}
         />
         {this.state.loading && <MyActivityIndicator />}
       </View>
