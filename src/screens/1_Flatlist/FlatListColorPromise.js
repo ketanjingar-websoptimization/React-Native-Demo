@@ -8,14 +8,7 @@ import {
   FlatList,
   TouchableOpacity,
 } from 'react-native';
-
-const Item = ({num, sum, isSelected}) => (
-  <View style={styles.title}>
-    <Text style={styles.text}>
-      {num} - {sum}
-    </Text>
-  </View>
-);
+import * as Component from '@components';
 
 export default class FlatListColorPromise extends React.Component {
   state = {
@@ -25,7 +18,6 @@ export default class FlatListColorPromise extends React.Component {
     isSelected: false,
     itemPressed: '',
     selected: '',
-    initialColor: 'orange',
   };
 
   loadArray = () => {
@@ -42,7 +34,7 @@ export default class FlatListColorPromise extends React.Component {
         firstArray: this.state.secondArray,
         isLoading: false,
       });
-    }, 1000);
+    }, 500);
   };
 
   componentDidMount() {
@@ -99,7 +91,7 @@ export default class FlatListColorPromise extends React.Component {
                       },
                     ]}
                     onPress={() => clickHandler(item)}>
-                    <Item
+                    <Component.FlatListColorPromiseItem
                       num={item.num}
                       sum={item.sum}
                       isPressed={item.isPressed}
@@ -132,12 +124,5 @@ const styles = StyleSheet.create({
     padding: 20,
     marginVertical: 8,
     marginHorizontal: 16,
-  },
-  text: {
-    textAlign: 'center',
-    fontSize: 18,
-  },
-  title: {
-    fontSize: 32,
   },
 });

@@ -1,13 +1,15 @@
 import React from 'react';
 import {StyleSheet, View, Text} from 'react-native';
 
-const Item = ({num, sum}) => (
-  <View style={styles.title}>
-    <Text style={styles.text}>
-      {num} - {sum}
-    </Text>
-  </View>
-);
+export default Item = ({num, sum, isSelected}) => {
+  return (
+    <View style={styles.title}>
+      <Text style={styles.text}>
+        {num} - {sum}
+      </Text>
+    </View>
+  );
+};
 
 const styles = StyleSheet.create({
   text: {
@@ -18,5 +20,3 @@ const styles = StyleSheet.create({
     fontSize: 32,
   },
 });
-
-export {Item};

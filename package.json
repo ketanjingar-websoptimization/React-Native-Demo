@@ -13,7 +13,8 @@
     "@react-native-community/hooks": "^2.6.0",
     "randomcolor": "^0.6.2",
     "react": "^16.13.1",
-    "react-native": "0.63.3"
+    "react-native": "0.63.3",
+    "react-native-elements": "^3.0.0-alpha.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",

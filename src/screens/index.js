@@ -13,4 +13,9 @@ export {default as HeightWidthPercentageDemo} from './3_ResponsiveLayout/HeightW
 export {default as ResponsiveLayoutDemo1} from './3_ResponsiveLayout/ResponsiveLayoutDemo1';
 export {default as ScreenDimensionInPercentageDemo} from './3_ResponsiveLayout/ScreenDimensionInPercentageDemo';
 export {default as SectionListDemo} from './4_SectionList/SectionListDemo';
-export {default as Rough} from './5_RoughWork/Rough';
+export {default as Rough} from './6_RoughWork/Rough';
+export {default as CardDemo} from './6_RoughWork/CardDemo';
+export {default as SplashScreenFromAndroidAssetFolder} from './5_ImageLoading/SplashScreenFromAndroidAssetFolder';
+export {default as SplashScreenFromHttpUrl} from './5_ImageLoading/SplashScreenFromHttpUrl';
+export {default as SplashScreenFromLocalResourceFolder} from './5_ImageLoading/SplashScreenFromLocalResourceFolder';
+export {default as ImagePropsDemo} from './5_ImageLoading/ImagePropsDemo';

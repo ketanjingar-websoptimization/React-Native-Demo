@@ -1,7 +1,7 @@
 import {Dimensions, PixelRatio} from 'react-native';
 
-let screenWidth = Dimensions.get('window').width;
-let screenHeight = Dimensions.get('window').height;
+const screenWidth = Dimensions.get('window').width;
+const screenHeight = Dimensions.get('window').height;
 
 const widthPercentageToDP = (widthPercent) => {
   const elemWidth =
@@ -18,4 +18,4 @@ const heightPercentageToDP = (heightPercent) => {
   return PixelRatio.roundToNearestPixel((screenHeight * elemHeight) / 100);
 };
 
-export {widthPercentageToDP, heightPercentageToDP};
+export {widthPercentageToDP, heightPercentageToDP, screenHeight, screenWidth};
