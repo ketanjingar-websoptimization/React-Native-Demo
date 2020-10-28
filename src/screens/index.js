@@ -14,7 +14,6 @@ export {default as ResponsiveLayoutDemo1} from './3_ResponsiveLayout/ResponsiveL
 export {default as ScreenDimensionInPercentageDemo} from './3_ResponsiveLayout/ScreenDimensionInPercentageDemo';
 export {default as SectionListDemo} from './4_SectionList/SectionListDemo';
 export {default as Rough} from './6_RoughWork/Rough';
-export {default as CardDemo} from './6_RoughWork/CardDemo';
 export {default as SplashScreenFromAndroidAssetFolder} from './5_ImageLoading/SplashScreenFromAndroidAssetFolder';
 export {default as SplashScreenFromHttpUrl} from './5_ImageLoading/SplashScreenFromHttpUrl';
 export {default as SplashScreenFromLocalResourceFolder} from './5_ImageLoading/SplashScreenFromLocalResourceFolder';
@@ -27,3 +26,10 @@ export {default as TouchableOpacityDemo} from './8_Buttons/TouchableOpacityDemo'
 export {default as TouchableWithoutFeedbackDemo} from './8_Buttons/TouchableWithoutFeedbackDemo';
 export {default as TouchableHighlightDemo} from './8_Buttons/TouchableHighlightDemo';
 export {default as NestedTouchableOpacityDemo} from './8_Buttons/NestedTouchableOpacityDemo';
+export {default as PressableDemo} from './8_Buttons/PressableDemo';
+export {default as RadioButtonDemo} from './8_Buttons/RadioButtonDemo';
+export {default as CheckBoxDemo} from './8_Buttons/CheckBoxDemo';
+export {default as DatePickerDemo} from './8_Buttons/DatePickerDemo';
+export {default as PanResponderDemo1} from './9_PanResponder/PanResponderDemo1';
+export {default as PanResponderZoomDemo} from './9_PanResponder/PanResponderZoomDemo';
+export {default as TextInputDemo} from './10_TextInput/TextInputDemo';
