@@ -33,3 +33,7 @@ export {default as DatePickerDemo} from './8_Buttons/DatePickerDemo';
 export {default as PanResponderDemo1} from './9_PanResponder/PanResponderDemo1';
 export {default as PanResponderZoomDemo} from './9_PanResponder/PanResponderZoomDemo';
 export {default as TextInputDemo} from './10_TextInput/TextInputDemo';
+export {default as ReactNativePickerDemo} from './11_DropDownMenu/ReactNativePickerDemo';
+export {default as MaterialDropDownDemo} from './11_DropDownMenu/MaterialDropDownDemo';
+export {default as ProgressBarDemo} from './13_ProgressBar/ProgressBarDemo';
+export {default as sliderDemo} from './12_Slider/sliderDemo';
